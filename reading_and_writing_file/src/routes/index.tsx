@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { getJokes } from '../serverActions/jokesActions'
 import { JokesList } from '../components/JokeList'
+import { JokeForm } from '../components/JokeForm'
 
 
 export const Route = createFileRoute('/')({
@@ -17,6 +18,7 @@ function App() {
     <div className="p-4 flex flex-col">
       <h1 className="text-2xl">DevJokes</h1>
       <JokesList jokes={jokes} />
+      <JokeForm />
     </div>
   )
 }
